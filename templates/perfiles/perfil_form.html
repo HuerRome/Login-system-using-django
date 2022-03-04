@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Registrate{% endblock %}
+
+{% block content %}
+<!--Todos los campos que tenemos en el forms.py los coloca como etiquetas <p></p>(as_p) también 
+    podemos colocarlos dentro de listas (as_ul) o como tabla(as_table) podemos renderizar el formulario 
+    de muchas maneras en el caso de que queramos darle algo de estilos-->
+   <form action="" method="POST">
+       {% csrf_token %}
+       {{ form.as_p }}
+       <input type="submit" name="submit">
+   </form>
+{% endblock content %}
+
